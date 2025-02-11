@@ -1,0 +1,77 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #f4f4f4;
+    background: #0a0a0a;
+    transition: all 0.3s ease-in-out;
+}
+
+.fullscreen-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #fff;
+}
+
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #eaeaea;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #eaeaea;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #dcdcdc;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-item {
+    background: #1a1a1a;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    color: #fff;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+}
+
+a {
+    color: #4fd1c5;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    background: #111;
+    color: #aaa;
+    padding: 20px 0;
+    text-align: center;
+}
