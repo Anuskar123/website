@@ -3,35 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Camille Mormal Inspired Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .fullscreen-section {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
 </head>
-<body>
-    <header class="fullscreen-section">
-        <div class="container">
-            <h1 class="main-title">Welcome to My Creative Space</h1>
+<body class="bg-gray-900 text-gray-100">
+    <header class="h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('images/background.jpg');">
+        <div class="text-center">
+            <img src="images/coverpic.jpg" alt="Profile Picture" class="profile-pic mx-auto">
+            <h1 class="text-4xl font-bold mt-4">Welcome to My Creative Space</h1>
+            <nav class="mt-8">
+                <a href="#about" class="text-lg text-teal-400 mx-4">About</a>
+                <a href="#projects" class="text-lg text-teal-400 mx-4">Projects</a>
+                <a href="#contact" class="text-lg text-teal-400 mx-4">Contact</a>
+            </nav>
         </div>
     </header>
-    <main>
-        <section id="about" class="fullscreen-section">
-            <h2>About Me</h2>
-            <p>Creative, passionate, and always curious. I love crafting experiences that blend design and technology.</p>
+    <main class="container mx-auto px-4 py-8">
+        <section id="about" class="my-16 text-center fullscreen-section">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-lg">Creative, passionate, and always curious. I love crafting experiences that blend design and technology.</p>
         </section>
-        <section id="projects" class="fullscreen-section">
-            <h2>My Projects</h2>
-            <div class="project-grid">
-                <div class="project-item">Project 1</div>
-                <div class="project-item">Project 2</div>
-                <div class="project-item">Project 3</div>
+        <section id="projects" class="my-16 text-center fullscreen-section">
+            <h2 class="text-3xl font-bold mb-4">My Projects</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Project 1</div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Project 2</div>
+                <div class="bg-gray-800 p-6 rounded-lg shadow-lg">Project 3</div>
             </div>
         </section>
-        <section id="contact" class="fullscreen-section">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out: <a href="mailto:anuskarsigdel04@gmail.com">anuskarsigdel04@gmail.com</a></p>
+        <section id="contact" class="my-16 text-center fullscreen-section">
+            <h2 class="text-3xl font-bold mb-4">Contact Me</h2>
+            <p class="text-lg">Feel free to reach out: <a href="mailto:anuskarsigdel04@gmail.com" class="text-teal-400">anuskarsigdel04@gmail.com</a></p>
         </section>
     </main>
-    <footer>
+    <footer class="bg-gray-800 text-gray-400 py-4 text-center">
         <p>&copy; 2025 Anuskar Sigdel</p>
     </footer>
     <script src="script.js"></script>
